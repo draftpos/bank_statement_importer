@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="universal_bank_statement_journal_dashboard_inherit" model="ir.ui.view">
+        <field name="name">universal.account.journal.dashboard.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-name='JournalBodyBankCash']//div[hasclass('o_kanban_primary_right')]" position="inside">
+                <div class="row">
+                    <button type="object" name="action_universal_import_wizard" class="btn btn-primary" style="margin-top: 10px; width: 100%;">
+                        <span>Universal Import</span>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
