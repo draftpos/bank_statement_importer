@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="universal_import_bank_statement_view" model="ir.ui.view">
+        <field name="name">universal.import.bank.statement.view</field>
+        <field name="model">universal.import.bank.statement</field>
+        <field name="arch" type="xml">
+            <form string="Import Bank Statement">
+                <group>
+                    <field name="journal_id" invisible="1"/>
+                    <field name="file_name" invisible="1"/>
+                    <field name="attachment" filename="file_name"/>
+                </group>
+                <footer>
+                    <button name="action_statement_import" string="Import" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
